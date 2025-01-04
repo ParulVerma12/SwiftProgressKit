@@ -32,11 +32,11 @@ struct ContentView: View {
     private func getLinearBarConfiguration() -> LinearProgressBarConfiguration {
         return .init(
             foregroundGradient: LinearGradient(
-                colors: [Color.green, Color.blue],
-                startPoint: .leading,
-                endPoint: .trailing),
+                colors: [Color.green, Color.green.opacity(0.6)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing),
             backgroundGradient: LinearGradient(
-                colors: [Color.gray, Color.black],
+                colors: [Color.gray.opacity(0.4), Color.gray.opacity(0.4)],
                 startPoint: .leading,
                 endPoint: .trailing),
             progressText: "Please wait while we I am completing the progress",

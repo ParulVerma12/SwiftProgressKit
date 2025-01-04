@@ -25,29 +25,13 @@ public struct LinearProgressBar: View {
                 
                 ZStack(alignment: .topLeading) {
                     // Background Bar
-                    ZStack {
-                        if let gradientBackground = configuration.backgroundGradient {
-                            Capsule()
-                                .fill(gradientBackground)
-                        } else {
-                            Capsule()
-                                .fill(configuration.backgroundColor)
-                        }
-                    }
+                    backgroundProgressBar()
                     
                     // Foreground Bar
-                    ZStack(alignment: .leading) {
-                        if let gradient = configuration.foregroundGradient {
-                            Capsule()
-                                .fill(gradient)
-                        } else if let color = configuration.foregroundColor {
-                            Capsule()
-                                .fill(color)
-                        }
-                    }
-                    .frame(width: progressBarWidth(geometryProxy: reader))
-                    .padding(2)
-
+                    foregroundProgressBar()
+                        .frame(width: progressBarWidth(geometryProxy: reader))
+                        .padding(2)
+                    
                     // Inside Text
                     if configuration.textPlacement == .inside {
                         progressText
@@ -65,6 +49,32 @@ public struct LinearProgressBar: View {
         }
     }
     
+    // MARK: - SubViews
+    
+    private func backgroundProgressBar() -> some View {
+        ZStack {
+            if let gradientBackground = configuration.backgroundGradient {
+                Capsule()
+                    .fill(gradientBackground)
+            } else {
+                Capsule()
+                    .fill(configuration.backgroundColor)
+            }
+        }
+    }
+    
+    private func foregroundProgressBar() -> some View {
+        ZStack(alignment: .leading) {
+            if let gradient = configuration.foregroundGradient {
+                Capsule()
+                    .fill(gradient)
+            } else if let color = configuration.foregroundColor {
+                Capsule()
+                    .fill(color)
+            }
+        }
+    }
+    
     private func progressBarWidth(geometryProxy: GeometryProxy) -> CGFloat {
         return min(geometryProxy.size.width * progress, geometryProxy.size.width)
     }
@@ -73,13 +83,29 @@ public struct LinearProgressBar: View {
         Text(configuration.progressText ?? "\(Int(progress * 100))%")
             .font(configuration.progressTextFont)
             .foregroundColor(configuration.progressTextColor)
+            .frame(maxWidth: .infinity, alignment: configuration.textAlignment.widgetAlignment)
     }
 }
 
 struct LinearProgressBar_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            LinearProgressBar(configuration: .stub(),
+            LinearProgressBar(configuration: .init(
+                foregroundGradient: LinearGradient(
+                    colors: [Color.green, Color.blue],
+                    startPoint: .leading,
+                    endPoint: .trailing),
+                backgroundGradient: LinearGradient(
+                    colors: [Color.gray, Color.black],
+                    startPoint: .leading,
+                    endPoint: .trailing),
+                progressText: "Please wait...",
+                progressTextFont: .caption,
+                progressTextColor: .black,
+                textPlacement: .above,
+                textAlignment: .center,
+                barHeight: 20,
+                progressAnimation: .easeInOut(duration: 1)),
                               progress: 0.04)
                 .padding(8)
                 .frame(width: 200)
