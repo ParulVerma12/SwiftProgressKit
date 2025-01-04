@@ -39,6 +39,8 @@ public struct LinearProgressBarConfiguration {
     /// The placement of the progress text relative to the progress bar.
     public var textPlacement: TextPlacement
     
+    /// The alignment of the text within the desired TextPlacement
+    public var textAlignment: TextAlignment
     // MARK: - Dimensions
     
     /// The height of the progress bar.
@@ -61,6 +63,7 @@ public struct LinearProgressBarConfiguration {
         progressTextFont: Font = .body,
         progressTextColor: Color = .primary,
         textPlacement: TextPlacement = .inside,
+        textAlignment: TextAlignment = .center,
         barHeight: CGFloat = 10.0,
         progressAnimation: Animation? = nil,
         foregroundBarPadding: CGFloat = 4
@@ -73,6 +76,7 @@ public struct LinearProgressBarConfiguration {
         self.progressTextFont = progressTextFont
         self.progressTextColor = progressTextColor
         self.textPlacement = textPlacement
+        self.textAlignment = textAlignment
         self.barHeight = barHeight
         self.progressAnimation = progressAnimation
         self.foregroundBarPadding = foregroundBarPadding
@@ -80,12 +84,12 @@ public struct LinearProgressBarConfiguration {
     
     // MARK: - Text Placement Enum
     public enum TextPlacement {
-        case inside   // Text appears inside the progress bar
-        case above    // Text appears above the progress bar
-        case below    // Text appears below the progress bar
+        case inside  // Text appears inside the progress bar
+        case above   // Text appears above the progress bar
+        case below   // Text appears below the progress bar
         case left    // Text appears below the progress bar
-        case right    // Text appears below the progress bar
-        case none     // No text is displayed
+        case right   // Text appears below the progress bar
+        case none  // Default position
     }
 }
 
