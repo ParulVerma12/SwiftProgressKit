@@ -28,10 +28,13 @@ struct ContentView: View {
                         }
                         print("Progress \(progress)")
                     }
-            }
+                }
             
             SemiCircularProgressBar(configuration: getSemiCircularBarConfiguration(), progress: progress)
                 .frame(width: 250, height: 200, alignment: .center)
+            
+            CircularProgressBar(configuration: getCircularBarConfiguration(), progress: progress)
+                .frame(width: 100, height: 150, alignment: .center)
             
             Spacer()
         }
@@ -67,9 +70,26 @@ struct ContentView: View {
                 endPoint: .trailing),
             progressText: "Please wait while we I am completing the progress",
             progressTextFont: .caption,
-            progressTextColor: .black,
-            textPlacement: .inside,
+            progressTextColor: .black, textPlacement: .inside,
+            lineWidth: 10,
             spacing: 20,
+            progressAnimation: .interactiveSpring())
+    }
+    
+    private func getCircularBarConfiguration() -> CircularProgressBarConfiguration {
+        return .init(
+            foregroundGradient: LinearGradient(
+                colors: [Color.green, Color.green.opacity(0.6)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing),
+            backgroundGradient: LinearGradient(
+                colors: [Color.gray.opacity(0.4), Color.gray.opacity(0.4)],
+                startPoint: .leading,
+                endPoint: .trailing),
+            progressText: "Uploading..",
+            progressTextFont: .caption,
+            progressTextColor: .black,
+            lineWidth: 10,
             progressAnimation: .interactiveSpring())
     }
 }
