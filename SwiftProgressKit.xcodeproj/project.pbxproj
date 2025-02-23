@@ -26,6 +26,7 @@
 		1F8706E62D21A980005B20AF /* SwiftProgressKitDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8706E52D21A980005B20AF /* SwiftProgressKitDemoUITestsLaunchTests.swift */; };
 		1F8706F92D21ACD5005B20AF /* SwiftProgressKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8706A82D21A913005B20AF /* SwiftProgressKit.framework */; };
 		1F8706FA2D21ACD5005B20AF /* SwiftProgressKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8706A82D21A913005B20AF /* SwiftProgressKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FBF832E2D6B14010081CAE8 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF832D2D6B14010081CAE8 /* CircularProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		1F8706DF2D21A980005B20AF /* SwiftProgressKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProgressKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8706E32D21A980005B20AF /* SwiftProgressKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProgressKitDemoUITests.swift; sourceTree = "<group>"; };
 		1F8706E52D21A980005B20AF /* SwiftProgressKitDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProgressKitDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FBF832D2D6B14010081CAE8 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 		1FBF832C2D6B10E00081CAE8 /* CircularProgressBar */ = {
 			isa = PBXGroup;
 			children = (
+				1FBF832D2D6B14010081CAE8 /* CircularProgressBar.swift */,
 			);
 			path = CircularProgressBar;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				1F8223A22D2AA96100F7A91A /* SemiCircularBarConfiguration.swift in Sources */,
 				1F8706AD2D21A913005B20AF /* SwiftProgressKit.docc in Sources */,
 				1F82239D2D29CB0800F7A91A /* TextAlignment+Extension.swift in Sources */,
+				1FBF832E2D6B14010081CAE8 /* CircularProgressBar.swift in Sources */,
 				1F3966CD2D24546100843BBB /* View+Extension in Sources */,
 				1F6959692D22BA8A00D382F1 /* LinearProgressBar.swift in Sources */,
 				1F69596B2D22CFC800D382F1 /* LinearProgressBarConfiguration.swift in Sources */,
