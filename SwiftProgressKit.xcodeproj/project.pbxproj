@@ -11,6 +11,8 @@
 		1F6959692D22BA8A00D382F1 /* LinearProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6959682D22BA8A00D382F1 /* LinearProgressBar.swift */; };
 		1F69596B2D22CFC800D382F1 /* LinearProgressBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69596A2D22CFC800D382F1 /* LinearProgressBarConfiguration.swift */; };
 		1F82239D2D29CB0800F7A91A /* TextAlignment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F82239C2D29CB0800F7A91A /* TextAlignment+Extension.swift */; };
+		1F8223A02D2A980100F7A91A /* SemiCircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F82239F2D2A980100F7A91A /* SemiCircularProgressBar.swift */; };
+		1F8223A22D2AA96100F7A91A /* SemiCircularBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8223A12D2AA96100F7A91A /* SemiCircularBarConfiguration.swift */; };
 		1F8706AD2D21A913005B20AF /* SwiftProgressKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1F8706AC2D21A913005B20AF /* SwiftProgressKit.docc */; };
 		1F8706B32D21A914005B20AF /* SwiftProgressKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8706A82D21A913005B20AF /* SwiftProgressKit.framework */; };
 		1F8706B82D21A914005B20AF /* SwiftProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8706B72D21A914005B20AF /* SwiftProgressKitTests.swift */; };
@@ -76,6 +78,8 @@
 		1F6959682D22BA8A00D382F1 /* LinearProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressBar.swift; sourceTree = "<group>"; };
 		1F69596A2D22CFC800D382F1 /* LinearProgressBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressBarConfiguration.swift; sourceTree = "<group>"; };
 		1F82239C2D29CB0800F7A91A /* TextAlignment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextAlignment+Extension.swift"; sourceTree = "<group>"; };
+		1F82239F2D2A980100F7A91A /* SemiCircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircularProgressBar.swift; sourceTree = "<group>"; };
+		1F8223A12D2AA96100F7A91A /* SemiCircularBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircularBarConfiguration.swift; sourceTree = "<group>"; };
 		1F8706A82D21A913005B20AF /* SwiftProgressKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftProgressKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8706AB2D21A913005B20AF /* SwiftProgressKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftProgressKit.h; sourceTree = "<group>"; };
 		1F8706AC2D21A913005B20AF /* SwiftProgressKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftProgressKit.docc; sourceTree = "<group>"; };
@@ -146,7 +150,9 @@
 		1F6959662D22BA4000D382F1 /* ProgressBars */ = {
 			isa = PBXGroup;
 			children = (
-				1F6959682D22BA8A00D382F1 /* LinearProgressBar.swift */,
+				1FBF832C2D6B10E00081CAE8 /* CircularProgressBar */,
+				1FBF832B2D6B10CE0081CAE8 /* LinearProgressBar */,
+				1F82239E2D2A94DD00F7A91A /* SemiCircularProgressBar */,
 			);
 			path = ProgressBars;
 			sourceTree = "<group>";
@@ -155,8 +161,17 @@
 			isa = PBXGroup;
 			children = (
 				1F69596A2D22CFC800D382F1 /* LinearProgressBarConfiguration.swift */,
+				1F8223A12D2AA96100F7A91A /* SemiCircularBarConfiguration.swift */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		1F82239E2D2A94DD00F7A91A /* SemiCircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				1F82239F2D2A980100F7A91A /* SemiCircularProgressBar.swift */,
+			);
+			path = SemiCircularProgressBar;
 			sourceTree = "<group>";
 		};
 		1F87069E2D21A913005B20AF = {
@@ -253,6 +268,21 @@
 				1F6959662D22BA4000D382F1 /* ProgressBars */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		1FBF832B2D6B10CE0081CAE8 /* LinearProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				1F6959682D22BA8A00D382F1 /* LinearProgressBar.swift */,
+			);
+			path = LinearProgressBar;
+			sourceTree = "<group>";
+		};
+		1FBF832C2D6B10E00081CAE8 /* CircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CircularProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,11 +486,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8223A22D2AA96100F7A91A /* SemiCircularBarConfiguration.swift in Sources */,
 				1F8706AD2D21A913005B20AF /* SwiftProgressKit.docc in Sources */,
 				1F82239D2D29CB0800F7A91A /* TextAlignment+Extension.swift in Sources */,
 				1F3966CD2D24546100843BBB /* View+Extension in Sources */,
 				1F6959692D22BA8A00D382F1 /* LinearProgressBar.swift in Sources */,
 				1F69596B2D22CFC800D382F1 /* LinearProgressBarConfiguration.swift in Sources */,
+				1F8223A02D2A980100F7A91A /* SemiCircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
