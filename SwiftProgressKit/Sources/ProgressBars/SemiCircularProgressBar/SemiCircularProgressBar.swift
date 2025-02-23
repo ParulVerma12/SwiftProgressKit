@@ -24,21 +24,26 @@ public struct SemiCircularProgressBar: View {
                 }
                 
                 ZStack {
-                    // Background Arc
+                    /// Background Arc
                     backgroundArc()
                     
-                    // Foreground Arc
+                    /// Foreground Arc
                     foregroundArc()
                         .animation(configuration.progressAnimation)
-                    
-                    // Inside Text
-                    if configuration.textPlacement == .inside {
-                        progressText
-                            .frame(width: reader.size.width * 0.6, height: reader.size.height / 2)
-                            .offset(y: reader.size.height * 0.25)
-                    }
                 }
                 .frame(width: reader.size.width, height: reader.size.width / 2)
+                .overlay(
+                    ZStack {
+                        // Inside Text
+                        if configuration.textPlacement == .inside {
+                            progressText
+                                .frame(width: reader.size.width * 0.35,
+                                       height: reader.size.height / 2)
+                                .offset(y: -reader.size.height * 0.01)
+                                .padding(.horizontal, 8)
+                        }
+                    }
+                )
                 
                 if configuration.textPlacement == .below {
                     progressText
@@ -91,5 +96,6 @@ public struct SemiCircularProgressBar: View {
 struct SemiCircularProgressBar_Previews: PreviewProvider {
     static var previews: some View {
         SemiCircularProgressBar(configuration: .stub(), progress: 0.6)
+            .frame(width: 300, height: 150, alignment: .center)
     }
 }

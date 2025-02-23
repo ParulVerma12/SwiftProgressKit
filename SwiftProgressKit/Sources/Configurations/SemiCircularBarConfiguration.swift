@@ -125,10 +125,10 @@ extension SemiCircularProgressBarConfiguration {
                 startPoint: .leading,
                 endPoint: .trailing
             ),
-            progressText: "Loading...",
+            progressText: "Please wait while we are uploading the data....",
             progressTextFont: .caption,
             progressTextColor: .black,
-            textPlacement: .above,
+            textPlacement: .inside,
             lineWidth: 20,
             progressAnimation: .easeInOut(duration: 1.0)
         )

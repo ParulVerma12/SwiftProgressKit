@@ -150,8 +150,9 @@
 		1F6959662D22BA4000D382F1 /* ProgressBars */ = {
 			isa = PBXGroup;
 			children = (
+				1FBF832C2D6B10E00081CAE8 /* CircularProgressBar */,
+				1FBF832B2D6B10CE0081CAE8 /* LinearProgressBar */,
 				1F82239E2D2A94DD00F7A91A /* SemiCircularProgressBar */,
-				1F6959682D22BA8A00D382F1 /* LinearProgressBar.swift */,
 			);
 			path = ProgressBars;
 			sourceTree = "<group>";
@@ -267,6 +268,21 @@
 				1F6959662D22BA4000D382F1 /* ProgressBars */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		1FBF832B2D6B10CE0081CAE8 /* LinearProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				1F6959682D22BA8A00D382F1 /* LinearProgressBar.swift */,
+			);
+			path = LinearProgressBar;
+			sourceTree = "<group>";
+		};
+		1FBF832C2D6B10E00081CAE8 /* CircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CircularProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

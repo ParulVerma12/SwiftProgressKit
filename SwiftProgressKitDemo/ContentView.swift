@@ -31,7 +31,7 @@ struct ContentView: View {
             }
             
             SemiCircularProgressBar(configuration: getSemiCircularBarConfiguration(), progress: progress)
-                .frame(width: 250, height: 100, alignment: .center)
+                .frame(width: 250, height: 200, alignment: .center)
             
             Spacer()
         }
@@ -68,7 +68,7 @@ struct ContentView: View {
             progressText: "Please wait while we I am completing the progress",
             progressTextFont: .caption,
             progressTextColor: .black,
-            textPlacement: .above,
+            textPlacement: .inside,
             spacing: 20,
             progressAnimation: .interactiveSpring())
     }
