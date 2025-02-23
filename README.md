@@ -66,6 +66,12 @@ struct ContentView: View {
 }
 ```
 
+# Screenshots
+
+<img width="272" alt="Screenshot 2025-02-23 at 8 26 10 PM" src="https://github.com/user-attachments/assets/7228bbc9-1fd2-4f35-b8c5-4febcdf73287" />
+<img width="174" alt="Screenshot 2025-02-23 at 8 26 22 PM" src="https://github.com/user-attachments/assets/867c4877-a388-44a3-9c63-091f3a4f6eb7" />
+<img width="214" alt="Screenshot 2025-02-23 at 8 26 43 PM" src="https://github.com/user-attachments/assets/ba33c494-6f20-4a91-9c76-a9434641dd3d" />
+
 # Customization 🎨
 
 You can customize the progress bars by modifying:
